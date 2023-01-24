@@ -1,0 +1,195 @@
+body{
+    
+}
+marquee{
+    
+    height:25pt;
+    font-size: 20pt;
+    border-style:double;
+    border-radius: 25px;
+    border-width: 6px;
+    color: #d3fbff;
+    font-weight: bold;
+    border-color: #52B2BF;
+}
+.about{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: double;
+    border-color: #52B2BF;
+    border-radius: 25px;
+    /* background-color: #000000; */
+    border-width: 10pt;
+    margin: 50pt ;
+    padding: 25pt;
+    text-align: center;
+    align-self: center;
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif
+}
+
+.gamesheader{
+    align-self: center;
+    margin-left:400pt;
+}
+.games{
+    border-style: double;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    border-radius: 25pt;
+    background-color: #000000;
+    border-color: #52B2BF;
+    border-width: 10pt;
+    margin: 50pt ;
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 1;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.eachGame{
+    flex-basis: 35%;
+    margin:30px;
+    text-align:center;
+    align-self:center;
+    justify-content: center;
+}
+h1{
+    color: #d3fbff;
+}
+p{
+    color: #d3fbff;
+    font-size: 30pt;
+    margin-left: 25pt;
+
+}
+.border{
+    border-radius: 25pt;
+    border-color:#52B2BF;
+}
+
+  
+  .container {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right {
+    text-align: right;
+    width: 100%;
+  }
+  
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .stack span {
+    font-weight: bold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 4rem;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 2s alternate-reverse;
+  }
+  
+  .stack span:nth-child(odd) { --glitch-translate: 8px; }
+  .stack span:nth-child(even) { --glitch-translate: -8px; }
+  
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }
+/*!* Parallax video styles*!*/
+.video-parallax {
+    clip: rect(0, 150vw, 800px, 0); /*!* Change second and third value to manipulate the width and height of your video *!*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: -100;
+  }
+  
+  .view .video-parall {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    min-width: 110vw;
+    min-height: 110vh;
+    max-width: none;
+    max-height: none;
+    visibility: visible;
+    z-index: -1
+  }
+  .ParallaxVideo{ 
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+    width: 600px
+    }
+    .ParallaxVideo video{ 
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -999;
+    }
+    .ParallaxVideo h1 {
+      font-size: 76px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
